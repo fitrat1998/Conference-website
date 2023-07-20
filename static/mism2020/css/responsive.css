@@ -1,0 +1,123 @@
+@media (min-width:1200px) {
+	.responsiv__menu-modal {
+		display: none !important;
+	}
+
+	.responsive-menu-footer {
+		display: none !important;
+	}
+} 
+@media (min-width: 128px) and (max-width: 1199px) {
+		body{
+			padding: 0;
+			margin: 0 auto;
+		}
+		header{
+			background: #008080;
+			height: 60px;
+			position: relative;
+		}
+
+		.responsiv__block {
+			display: none !important;
+		}
+
+		.responsive__menu{
+			position: fixed;
+			right: 20px;
+			top: 10px;
+		}
+		.responsive__menu-remove{
+			position: fixed;
+			left: 30px ;
+			top: 10px;
+
+		}
+		.reposiv__menu-icon-add{
+			font-size: 35px;
+			color: #fff;
+		}
+		.reposiv__menu-icon-remove{
+			font-size: 35px;
+			color: #fff;
+			/*float:left !important;*/
+			left: 30px;
+		}
+		.responsiv__menu-modal{
+			position: relative;
+			top: 0;
+			right: 0;
+			left: 0;
+			bottom: 0;
+			z-index: 99;
+			width: 100vw;
+			height: 200vh;
+			background: none;
+			display: flex;
+			justify-content: center;
+			align-items: flex-start;
+			padding-top: 50px;
+			opacity: 0;
+			pointer-events: none;
+			transition: 0.3s;
+		}
+
+		.responsiv__menu-modal-active{
+			opacity: 1;
+			pointer-events: all;
+		}
+		.responsiv__modal-link{
+			width: 100vw;
+			height: 100vh;
+			background: #008080;
+			color:#fff !important;
+		}
+
+		.responsive__ul-menu li {
+			text-decoration:none !important;
+			list-style: none;	
+		}
+
+		.menu-link {
+			margin:20px !important;
+			padding:0px;
+			text-decoration: none !important;
+			letter-spacing: 1.5px;
+		}
+
+		.menu-link a {
+			cursor:pointer;
+			color:#fff !important;
+			font-size:24px;
+		}
+
+		.menu-link a:hover {
+			color:orange!important;
+			font-size:24px;
+			transition:0.4s;
+			text-decoration: none;
+		}
+
+		.responsiv__main{
+			
+		}
+		.container{
+
+		}
+		.page-header{
+			padding: 0 !important;
+			font-size: 17px;
+		}
+		.responsiv__row{
+			display: grid;
+			grid-template-columns: 1fr 1fr !important;
+			grid-template-rows: auto !important;
+		}
+
+		.reponsive__footer {
+			display: none;
+		}
+		.copyright {
+			justify-content: center;
+		}
+}

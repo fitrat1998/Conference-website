@@ -1,0 +1,50 @@
+<?php
+
+define ('GUSER','my@gmail.com');
+define ('GPWD','pass');
+
+$name       = $_POST['nombre'];
+$mailfrom   = $_POST['email'];
+$context    = $_POST['context'];
+
+$subject    = 'Information';
+$to         = "my@gmail.com";
+
+smtpmailer($mailfrom, $name, $subject, $context);
+
+
+// make a separate file and include this file in that. call this function in that file.
+
+function smtpmailer($from, $name, $subject, $context) {
+    global $error;
+    $mail = new PHPMailer();                    // create a new object
+
+    $mail->isSMTP();                            // Set mailer to use SMTP
+    $mail->Host      = 'smtp.gmail.com';        // Specify main and backup SMTP servers
+    $mail->SMTPAuth  = true;                    // Enable SMTP authentication
+    $mail->CharSet   = "UTF-8";
+    $mail->SMTPDebug = 2;                       // Enable verbose debug output
+    $mail->isHTML(true);                        // Set email format to HTML
+    
+    
+    $mail->Username = GUSER;                    // SMTP username
+    $mail->Password = GPWD;                     // SMTP password
+    
+    //$mail->SMTPAutoTLS    = false;
+    $mail->SMTPSecure   = 'tls';                // Enable TLS encryption, `ssl` also accepted
+    $mail->Port         = 587;                  // TCP port to connect to
+
+    $mail->setFrom($from,$name);            // Mail Form
+    $mail->addAddress('my@gmail.com');          // Name is optional
+
+    $mail->Subject = $subject;
+    $mail->Body    = $context;
+    
+   if(!$mail->Send()) {
+        $error = 'Mail error: '.$mail->ErrorInfo;
+        return false;
+    } else {
+        $error = 'Message sent!';
+        return true;
+    }
+}

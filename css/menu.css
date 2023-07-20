@@ -1,0 +1,66 @@
+.cover {
+  height: 100%;
+  width: 250px;
+  position: abso66lute;
+  background: #008080;
+  z-index: 1;
+  transition: 0.5s ease;
+  transform: translateX(-250);
+}
+
+.cover .head {
+  color: #fff;
+  font-size: 30px;
+  font-weight: bold;
+  padding: 30px;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 3px;
+  background:none;
+}
+
+ol {
+  width: 100%;
+  list-style: none;
+}
+
+ol li {
+  display: block;
+  width: 100%;
+}
+
+ol li a {
+  color:#fff;
+  padding:15px 10px;
+  text-decoration: none;
+  display: none;
+  font-size: 20px;3
+  letter-spacing: px;
+  position: relative;
+  transition: 0.3s;
+  overflow:hidden;
+}
+
+ol li a i {
+  width: 70px;
+  font-size: 25px;
+  text-align: center;
+  padding-left: 30px;
+}
+
+ol li a:hover {
+  background:#fff;
+  color: #fff;
+  letter-spacing: 5px;
+}
+
+
+
+
+
+
+
+
+
+
+
